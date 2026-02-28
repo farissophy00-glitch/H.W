@@ -1,10 +1,10 @@
-[index.html](https://github.com/user-attachments/files/25640681/index.html)
+[index.html](https://github.com/user-attachments/files/25640802/index.html)
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Empire · Triangle Geometry Challenge</title>
+    <title>D/Asharf elsaqa · Triangle Geometry</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -479,17 +479,14 @@
 </head>
 <body>
     <div class="container">
-        <!-- Header with title and timer -->
+        <!-- Header with title and timer - modified per request -->
         <div class="header">
             <div class="main-title">
-                <i class="fas fa-crown empire-logo"></i> MATH EMPIRE
+                <i class="fas fa-crown empire-logo"></i> D/Asharf elsaqa
             </div>
-            <div class="subtitle">Triangle Geometry Challenge</div>
-            <div class="instructors">
-                <strong>Instructors:</strong>
-                <span class="instructor-name">Eng. Youseef Mehanna</span> &
-                <span class="instructor-name">Eng. Eyad Hefny</span>
-            </div>
+            <!-- subtitle and instructors hidden as requested -->
+            <div class="subtitle" style="display: none;"></div>
+            <div class="instructors" style="display: none;"></div>
             <div class="timer-container" id="timer">
                 <i class="fas fa-clock"></i>
                 <span id="time-display">60:00</span>
@@ -552,6 +549,7 @@
 
     <script>
         // Exam data – 8 triangle geometry questions with exact answers
+        // Correct answers are distributed: A: Q1,Q5 ; B: Q2,Q6 ; C: Q3,Q7 ; D: Q4,Q8
         const examQuestions = [
             {
                 id: 1,
@@ -562,43 +560,43 @@
                     "BC = 12 in, perimeter = 24 + 12√3 in",
                     "BC = 24 in, perimeter = 48 + 12√3 in"
                 ],
-                correct: 0,
+                correct: 0,   // A
                 explanation: "In a 30-60-90 triangle, sides are in ratio 1 : √3 : 2 opposite 30°, 60°, 90°. Angle A = 30°, so BC (opposite A) = half the hypotenuse AC = 12. AB (opposite 60°) = 12√3. Perimeter = 12 + 12√3 + 24 = 36 + 12√3."
             },
             {
                 id: 2,
                 question: `Triangle ABC is an isosceles right triangle. Angle B is a right angle. The length of one leg is 9√2 inches. What are the length of the hypotenuse and the area? (Use exact numbers)`,
                 options: [
-                    "Hypotenuse = 18 in, Area = 81 sq in",
-                    "Hypotenuse = 9√2 in, Area = 81 sq in",
+                    "Hypotenuse = 9√2 in, Area = 81 sq in",      // swapped (was A)
+                    "Hypotenuse = 18 in, Area = 81 sq in",      // correct now at B
                     "Hypotenuse = 18 in, Area = 162 sq in",
                     "Hypotenuse = 9√2 in, Area = 162 sq in"
                 ],
-                correct: 0,
+                correct: 1,   // B
                 explanation: "Isosceles right triangle: legs equal. Hypotenuse = leg × √2 = 9√2 × √2 = 18. Area = ½ × leg² = ½ × (9√2)² = ½ × 162 = 81."
             },
             {
                 id: 3,
                 question: `Triangle ABC is an isosceles right triangle. Angle B is a right angle. The length of the hypotenuse is 41√2 inches. What is the perimeter? (Use exact numbers)`,
                 options: [
-                    "82 + 41√2 in",
+                    "82 + 82√2 in",          // swapped (was A)
                     "41 + 41√2 in",
-                    "82 + 82√2 in",
+                    "82 + 41√2 in",          // correct now at C
                     "41 + 82√2 in"
                 ],
-                correct: 0,
+                correct: 2,   // C
                 explanation: "Leg = hypotenuse / √2 = 41√2 / √2 = 41. Perimeter = 2×leg + hypotenuse = 82 + 41√2."
             },
             {
                 id: 4,
                 question: `Triangle ABC is a right triangle where angle B is a right angle. The measure of Angle C is 30°. Side BC has a length of 57 inches. What is the perimeter? (Use exact numbers)`,
                 options: [
-                    "57 + 57√3 in",
+                    "57 + 19√3 in",          // swapped (was A)
                     "57 + 38√3 in",
                     "114 + 57√3 in",
-                    "57 + 19√3 in"
+                    "57 + 57√3 in"           // correct now at D
                 ],
-                correct: 0,
+                correct: 3,   // D
                 explanation: "Angle C = 30°, so side opposite C (AB) is short leg. BC is opposite 60°, so BC = √3 × short leg. Short leg = BC/√3 = 57/√3 = 19√3. Hypotenuse = 2 × short leg = 38√3. Perimeter = 19√3 + 57 + 38√3 = 57 + 57√3."
             },
             {
@@ -610,43 +608,43 @@
                     "98 in",
                     "98√2 in"
                 ],
-                correct: 0,
+                correct: 0,   // A
                 explanation: "Let leg = L, then hypotenuse = L√2, perimeter = 2L + L√2 = L(2+√2). Given perimeter = 98(1+√2). Since 2+√2 = √2(1+√2), we have L√2 = 98 → L = 98/√2 = 49√2."
             },
             {
                 id: 6,
                 question: `A 30-60-90 triangle has a perimeter of 15 + 15√3 inches. What is the length of the longer leg? (Use exact numbers)`,
                 options: [
-                    "15 in",
-                    "5√3 in",
+                    "5√3 in",        // swapped (was A)
+                    "15 in",         // correct now at B
                     "10 in",
                     "15√3 in"
                 ],
-                correct: 0,
+                correct: 1,   // B
                 explanation: "Let short leg = x, then long leg = x√3, hypo = 2x. Perimeter = 3x + x√3 = x(3+√3) = 15(1+√3). Since 3+√3 = √3(1+√3), we get x√3 = 15 → x = 5√3. Longer leg = x√3 = 15."
             },
             {
                 id: 7,
                 question: `A 30-60-90 triangle has an area of 8√3 square inches. What is the perimeter? (Use exact numbers)`,
                 options: [
-                    "12 + 4√3 in",
+                    "16 + 8√3 in",       // swapped (was A)
                     "8 + 8√3 in",
-                    "16 + 8√3 in",
+                    "12 + 4√3 in",       // correct now at C
                     "4 + 4√3 in"
                 ],
-                correct: 0,
+                correct: 2,   // C
                 explanation: "Area = ½ × short × long = ½ × x × x√3 = (x²√3)/2 = 8√3 → x² = 16 → x = 4. Sides: short = 4, long = 4√3, hypo = 8. Perimeter = 4 + 4√3 + 8 = 12 + 4√3."
             },
             {
                 id: 8,
                 question: `An equilateral triangle has an altitude of 11√3 inches. What is the perimeter? (Use exact numbers)`,
                 options: [
-                    "66 in",
+                    "66√3 in",        // swapped (was A)
                     "33 in",
                     "22√3 in",
-                    "66√3 in"
+                    "66 in"           // correct now at D
                 ],
-                correct: 0,
+                correct: 3,   // D
                 explanation: "Altitude of equilateral triangle = (s√3)/2 = 11√3 → s/2 = 11 → s = 22. Perimeter = 3s = 66."
             }
         ];
@@ -947,9 +945,8 @@
             const secondsTaken = timeTaken % 60;
            
             // Create result content
-            let resultContent = `MATH EMPIRE - TRIANGLE GEOMETRY CHALLENGE RESULTS\n`;
+            let resultContent = `D/ASHARF ELSAQA - TRIANGLE GEOMETRY CHALLENGE RESULTS\n`;
             resultContent += `===================================================\n\n`;
-            resultContent += `Instructors: Eng. Youseef Mehanna & Eng. Eyad Hefny\n`;
             resultContent += `Challenge started at: ${examStartTime.toLocaleString()}\n`;
             resultContent += `Challenge completed at: ${endTime.toLocaleString()}\n`;
             resultContent += `Time taken: ${minutesTaken} minutes, ${secondsTaken} seconds\n\n`;
@@ -983,7 +980,7 @@
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = `Math_Empire_Geometry_${endTime.toISOString().split('T')[0]}.txt`;
+            a.download = `D_Asharf_elsaqa_Geometry_${endTime.toISOString().split('T')[0]}.txt`;
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
