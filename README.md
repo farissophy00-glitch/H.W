@@ -1,10 +1,10 @@
-[index.html](https://github.com/user-attachments/files/25640802/index.html)
+[index.html](https://github.com/user-attachments/files/25722337/index.html)
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D/Asharf elsaqa · Triangle Geometry</title>
+    <title>D/Asharf elsaqa - Advanced Algebra</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -479,14 +479,16 @@
 </head>
 <body>
     <div class="container">
-        <!-- Header with title and timer - modified per request -->
+        <!-- Header with title and timer -->
         <div class="header">
             <div class="main-title">
                 <i class="fas fa-crown empire-logo"></i> D/Asharf elsaqa
             </div>
-            <!-- subtitle and instructors hidden as requested -->
-            <div class="subtitle" style="display: none;"></div>
-            <div class="instructors" style="display: none;"></div>
+            <div class="subtitle">Advanced Algebra Challenge</div>
+            <div class="instructors">
+                <strong>Instructor:</strong>
+                <span class="instructor-name">D/Asharf elsaqa</span>
+            </div>
             <div class="timer-container" id="timer">
                 <i class="fas fa-clock"></i>
                 <span id="time-display">60:00</span>
@@ -497,11 +499,11 @@
         <div class="exam-content">
             <div class="exam-section">
                 <div class="section-title">
-                    <h2>Triangle Geometry Challenge</h2>
-                    <span id="answered-count">0/8 answered</span>
+                    <h2>Advanced Algebra Challenge</h2>
+                    <span id="answered-count">0/20 answered</span>
                 </div>
                 <div class="test-instructions">
-                    <i class="fas fa-info-circle"></i> <strong>Instructions:</strong> Solve each problem without a calculator. Use exact numbers (radicals allowed). Choose the correct option.
+                    <i class="fas fa-info-circle"></i> <strong>Instructions:</strong> Solve each problem without a calculator. Show your mastery of exponents, roots, and factorization techniques.
                 </div>
                
                 <!-- Questions will be dynamically inserted here -->
@@ -534,7 +536,7 @@
                     <div class="progress" id="exam-progress"></div>
                 </div>
                 <div class="score-display">
-                    <i class="fas fa-crown"></i> Score: <span id="current-score">0</span>/8
+                    <i class="fas fa-crown"></i> Score: <span id="current-score">0</span>/20
                 </div>
                 <p id="score-message">Complete the challenge to see your score</p>
             </div>
@@ -542,110 +544,153 @@
        
         <!-- Footer -->
         <div class="footer">
-            <p>© 2023 Math Empire | Conquer Mathematics, Rule the Empire</p>
-            <p>Triangle Geometry Challenge designed by Eng. Youseef Mehanna & Eng. Eyad Hefny</p>
+            <p>© 2023 D/Asharf elsaqa | Conquer Mathematics</p>
+            <p>Advanced Algebra Challenge prepared by D/Asharf elsaqa</p>
         </div>
     </div>
 
     <script>
-        // Exam data – 8 triangle geometry questions with exact answers
-        // Correct answers are distributed: A: Q1,Q5 ; B: Q2,Q6 ; C: Q3,Q7 ; D: Q4,Q8
+        // Exam data - 20 challenging algebra problems from Exponent.pdf pages 2-5
         const examQuestions = [
             {
                 id: 1,
-                question: `Triangle ABC is a 30-60-90 triangle. Angle B is a right angle. The measure of Angle A is 30°. The length of side AC is 24 inches. What is the length of side BC and the perimeter of the triangle? (Use exact numbers)`,
-                options: [
-                    "BC = 12 in, perimeter = 36 + 12√3 in",
-                    "BC = 12√3 in, perimeter = 36 + 12√3 in",
-                    "BC = 12 in, perimeter = 24 + 12√3 in",
-                    "BC = 24 in, perimeter = 48 + 12√3 in"
-                ],
-                correct: 0,   // A
-                explanation: "In a 30-60-90 triangle, sides are in ratio 1 : √3 : 2 opposite 30°, 60°, 90°. Angle A = 30°, so BC (opposite A) = half the hypotenuse AC = 12. AB (opposite 60°) = 12√3. Perimeter = 12 + 12√3 + 24 = 36 + 12√3."
+                question: `What is the value of 3<sup>-1</sup>? <span class="difficulty-badge">Easy</span>`,
+                options: ["1/3", "-3", "3", "-1/3"],
+                correct: 0,
+                explanation: "3<sup>-1</sup> = 1/3."
             },
             {
                 id: 2,
-                question: `Triangle ABC is an isosceles right triangle. Angle B is a right angle. The length of one leg is 9√2 inches. What are the length of the hypotenuse and the area? (Use exact numbers)`,
-                options: [
-                    "Hypotenuse = 9√2 in, Area = 81 sq in",      // swapped (was A)
-                    "Hypotenuse = 18 in, Area = 81 sq in",      // correct now at B
-                    "Hypotenuse = 18 in, Area = 162 sq in",
-                    "Hypotenuse = 9√2 in, Area = 162 sq in"
-                ],
-                correct: 1,   // B
-                explanation: "Isosceles right triangle: legs equal. Hypotenuse = leg × √2 = 9√2 × √2 = 18. Area = ½ × leg² = ½ × (9√2)² = ½ × 162 = 81."
+                question: `Simplify (16/x<sup>2</sup>)<sup>-3</sup>. <span class="difficulty-badge">Medium</span>`,
+                options: ["x<sup>6</sup>/4096", "4096/x<sup>6</sup>", "x<sup>6</sup>/16", "16/x<sup>6</sup>"],
+                correct: 0,
+                explanation: "(16/x<sup>2</sup>)<sup>-3</sup> = (x<sup>2</sup>/16)<sup>3</sup> = x<sup>6</sup>/4096."
             },
             {
                 id: 3,
-                question: `Triangle ABC is an isosceles right triangle. Angle B is a right angle. The length of the hypotenuse is 41√2 inches. What is the perimeter? (Use exact numbers)`,
-                options: [
-                    "82 + 82√2 in",          // swapped (was A)
-                    "41 + 41√2 in",
-                    "82 + 41√2 in",          // correct now at C
-                    "41 + 82√2 in"
-                ],
-                correct: 2,   // C
-                explanation: "Leg = hypotenuse / √2 = 41√2 / √2 = 41. Perimeter = 2×leg + hypotenuse = 82 + 41√2."
+                question: `What is the value of 5<sup>0</sup>? <span class="difficulty-badge">Easy</span>`,
+                options: ["0", "1", "5", "undefined"],
+                correct: 1,
+                explanation: "Any nonzero number raised to the power 0 equals 1."
             },
             {
                 id: 4,
-                question: `Triangle ABC is a right triangle where angle B is a right angle. The measure of Angle C is 30°. Side BC has a length of 57 inches. What is the perimeter? (Use exact numbers)`,
-                options: [
-                    "57 + 19√3 in",          // swapped (was A)
-                    "57 + 38√3 in",
-                    "114 + 57√3 in",
-                    "57 + 57√3 in"           // correct now at D
-                ],
-                correct: 3,   // D
-                explanation: "Angle C = 30°, so side opposite C (AB) is short leg. BC is opposite 60°, so BC = √3 × short leg. Short leg = BC/√3 = 57/√3 = 19√3. Hypotenuse = 2 × short leg = 38√3. Perimeter = 19√3 + 57 + 38√3 = 57 + 57√3."
+                question: `What is (-2)<sup>2</sup>? <span class="difficulty-badge">Easy</span>`,
+                options: ["4", "-4", "2", "-2"],
+                correct: 0,
+                explanation: "(-2)<sup>2</sup> = (-2) × (-2) = 4."
             },
             {
                 id: 5,
-                question: `An isosceles right triangle has a perimeter of 98 + 98√2 inches. What is the length of one leg? (Use exact numbers)`,
-                options: [
-                    "49√2 in",
-                    "49 in",
-                    "98 in",
-                    "98√2 in"
-                ],
-                correct: 0,   // A
-                explanation: "Let leg = L, then hypotenuse = L√2, perimeter = 2L + L√2 = L(2+√2). Given perimeter = 98(1+√2). Since 2+√2 = √2(1+√2), we have L√2 = 98 → L = 98/√2 = 49√2."
+                question: `If x = -3, what is x<sup>2</sup>? <span class="difficulty-badge">Easy</span>`,
+                options: ["9", "-9", "6", "-6"],
+                correct: 0,
+                explanation: "(-3)<sup>2</sup> = 9."
             },
             {
                 id: 6,
-                question: `A 30-60-90 triangle has a perimeter of 15 + 15√3 inches. What is the length of the longer leg? (Use exact numbers)`,
-                options: [
-                    "5√3 in",        // swapped (was A)
-                    "15 in",         // correct now at B
-                    "10 in",
-                    "15√3 in"
-                ],
-                correct: 1,   // B
-                explanation: "Let short leg = x, then long leg = x√3, hypo = 2x. Perimeter = 3x + x√3 = x(3+√3) = 15(1+√3). Since 3+√3 = √3(1+√3), we get x√3 = 15 → x = 5√3. Longer leg = x√3 = 15."
+                question: `If x = -3, what is -x<sup>2</sup>? <span class="difficulty-badge">Easy</span>`,
+                options: ["-9", "9", "6", "-6"],
+                correct: 0,
+                explanation: "-x<sup>2</sup> = -((-3)<sup>2</sup>) = -9."
             },
             {
                 id: 7,
-                question: `A 30-60-90 triangle has an area of 8√3 square inches. What is the perimeter? (Use exact numbers)`,
-                options: [
-                    "16 + 8√3 in",       // swapped (was A)
-                    "8 + 8√3 in",
-                    "12 + 4√3 in",       // correct now at C
-                    "4 + 4√3 in"
-                ],
-                correct: 2,   // C
-                explanation: "Area = ½ × short × long = ½ × x × x√3 = (x²√3)/2 = 8√3 → x² = 16 → x = 4. Sides: short = 4, long = 4√3, hypo = 8. Perimeter = 4 + 4√3 + 8 = 12 + 4√3."
+                question: `If 2<sup>x+6</sup> = 2<sup>5</sup>, what is 2<sup>x</sup>? <span class="difficulty-badge">Medium</span>`,
+                options: ["2<sup>-1</sup>", "2", "1/2", "4"],
+                correct: 2,
+                explanation: "x+6 = 5 ⇒ x = -1, so 2<sup>x</sup> = 2<sup>-1</sup> = 1/2."
             },
             {
                 id: 8,
-                question: `An equilateral triangle has an altitude of 11√3 inches. What is the perimeter? (Use exact numbers)`,
-                options: [
-                    "66√3 in",        // swapped (was A)
-                    "33 in",
-                    "22√3 in",
-                    "66 in"           // correct now at D
-                ],
-                correct: 3,   // D
-                explanation: "Altitude of equilateral triangle = (s√3)/2 = 11√3 → s/2 = 11 → s = 22. Perimeter = 3s = 66."
+                question: `If 3<sup>a+1</sup> = 3<sup>-a+7</sup>, what is a+2? <span class="difficulty-badge">Medium</span>`,
+                options: ["5", "4", "6", "3"],
+                correct: 0,
+                explanation: "a+1 = -a+7 ⇒ 2a = 6 ⇒ a = 3, so a+2 = 5."
+            },
+            {
+                id: 9,
+                question: `If 2<sup>y</sup> × (9<sup>x-3</sup>)<sup>1/2</sup> = 36, what is xy? <span class="difficulty-badge">Hard</span>`,
+                options: ["2", "15", "10", "20"],
+                correct: 2,
+                explanation: "2<sup>y</sup> × 3<sup>x-3</sup> = 2<sup>2</sup> × 3<sup>2</sup> ⇒ y=2, x-3=2 ⇒ x=5, xy=10."
+            },
+            {
+                id: 10,
+                question: `If 4<sup>2n+3</sup> = 8<sup>n+5</sup>, what is 2n+1? <span class="difficulty-badge">Hard</span>`,
+                options: ["19", "9", "10", "20"],
+                correct: 0,
+                explanation: "2<sup>2(2n+3)</sup> = 2<sup>3(n+5)</sup> ⇒ 4n+6 = 3n+15 ⇒ n=9, so 2n+1=19."
+            },
+            {
+                id: 11,
+                question: `If (16x)<sup>a</sup> = 2x<sup>a</sup>, what is a? <span class="difficulty-badge">Hard</span>`,
+                options: ["1/4", "1/2", "2", "4"],
+                correct: 0,
+                explanation: "16<sup>a</sup> x<sup>a</sup> = 2 x<sup>a</sup> ⇒ 16<sup>a</sup> = 2 ⇒ (2<sup>4</sup>)<sup>a</sup> = 2<sup>1</sup> ⇒ 4a=1 ⇒ a=1/4."
+            },
+            {
+                id: 12,
+                question: `If 2(16<sup>x</sup>) = 64, what is 2x? <span class="difficulty-badge">Medium</span>`,
+                options: ["2.5", "2", "3", "4"],
+                correct: 0,
+                explanation: "2 × 16<sup>x</sup> = 64 ⇒ 16<sup>x</sup> = 32 ⇒ 2<sup>4x</sup> = 2<sup>5</sup> ⇒ 4x=5 ⇒ x=5/4, so 2x=5/2=2.5."
+            },
+            {
+                id: 13,
+                question: `If (3<sup>9</sup>)<sup>3<sup>12</sup></sup> = 3<sup>3<sup>x</sup></sup>, what is x? <span class="difficulty-badge">Challenging</span>`,
+                options: ["14", "12", "9", "3"],
+                correct: 0,
+                explanation: "(3<sup>9</sup>)<sup>3<sup>12</sup></sup> = 3<sup>9·3<sup>12</sup></sup> = 3<sup>3<sup>2</sup>·3<sup>12</sup></sup> = 3<sup>3<sup>14</sup></sup> ⇒ 3<sup>x</sup> = 3<sup>14</sup> ⇒ x=14."
+            },
+            {
+                id: 14,
+                question: `If 2a - b = 4, what is (4<sup>a</sup>)/(2<sup>b</sup>)? <span class="difficulty-badge">Medium</span>`,
+                options: ["16", "8", "4", "2"],
+                correct: 0,
+                explanation: "4<sup>a</sup>/2<sup>b</sup> = 2<sup>2a</sup>/2<sup>b</sup> = 2<sup>2a-b</sup> = 2<sup>4</sup> = 16."
+            },
+            {
+                id: 15,
+                question: `If 2a - b = 3, what is (9<sup>a</sup>)/(3<sup>b</sup>)? <span class="difficulty-badge">Medium</span>`,
+                options: ["27", "9", "3", "1"],
+                correct: 0,
+                explanation: "9<sup>a</sup>/3<sup>b</sup> = 3<sup>2a</sup>/3<sup>b</sup> = 3<sup>2a-b</sup> = 3<sup>3</sup> = 27."
+            },
+            {
+                id: 16,
+                question: `If 2x = 3 + y, what is (9<sup>x</sup>)/(3<sup>y</sup>)? <span class="difficulty-badge">Medium</span>`,
+                options: ["27", "9", "3", "1"],
+                correct: 0,
+                explanation: "9<sup>x</sup>/3<sup>y</sup> = 3<sup>2x</sup>/3<sup>y</sup> = 3<sup>2x-y</sup> = 3<sup>(3+y)-y</sup> = 3<sup>3</sup> = 27."
+            },
+            {
+                id: 17,
+                question: `If 4x - 2y = 20, what is (16<sup>x</sup>)/(4<sup>y</sup>)? <span class="difficulty-badge">Medium</span>`,
+                options: ["2<sup>20</sup>", "2<sup>10</sup>", "16<sup>5</sup>", "4<sup>5</sup>"],
+                correct: 0,
+                explanation: "16<sup>x</sup>/4<sup>y</sup> = 2<sup>4x</sup>/2<sup>2y</sup> = 2<sup>4x-2y</sup> = 2<sup>20</sup>."
+            },
+            {
+                id: 18,
+                question: `If 3x - y = 1 and (8<sup>2x</sup>/4<sup>y</sup>) + t = 7, what is t? <span class="difficulty-badge">Hard</span>`,
+                options: ["3", "4", "5", "6"],
+                correct: 0,
+                explanation: "8<sup>2x</sup>/4<sup>y</sup> = 2<sup>6x</sup>/2<sup>2y</sup> = 2<sup>2(3x-y)</sup> = 2<sup>2</sup> = 4, so 4 + t = 7 ⇒ t = 3."
+            },
+            {
+                id: 19,
+                question: `If 12x - 2y = 1, what is (216<sup>2x</sup>)/(6<sup>y</sup>)? <span class="difficulty-badge">Hard</span>`,
+                options: ["√6", "6", "1/6", "36"],
+                correct: 0,
+                explanation: "216 = 6<sup>3</sup>, so 216<sup>2x</sup> = 6<sup>6x</sup>, then divided by 6<sup>y</sup> = 6<sup>6x-y</sup> = 6<sup>(12x-2y)/2</sup> = 6<sup>1/2</sup> = √6."
+            },
+            {
+                id: 20,
+                question: `If x = -5, what is x<sup>3</sup>? <span class="difficulty-badge">Easy</span>`,
+                options: ["-125", "125", "-25", "25"],
+                correct: 0,
+                explanation: "(-5)<sup>3</sup> = -125."
             }
         ];
 
@@ -688,7 +733,7 @@
 
         // Record the start time in localStorage
         function recordStartTime() {
-            const storageKey = 'math_empire_geometry_start_time';
+            const storageKey = 'math_empire_challenge_start_time';
            
             // Check if we already have a start time
             const storedTime = localStorage.getItem(storageKey);
@@ -832,15 +877,15 @@
                 let message = `You scored ${score}/${total} (${percentage}%). `;
                
                 if (percentage >= 90) {
-                    message += "👑 <strong>EMPEROR STATUS:</strong> You rule the Math Empire! Your geometry mastery is absolute.";
+                    message += "👑 <strong>EMPEROR STATUS:</strong> You rule the Math Empire! Your algebra mastery is absolute.";
                 } else if (percentage >= 80) {
-                    message += "⚔️ <strong>ROYAL KNIGHT:</strong> Excellent command of triangles! You're a valued defender.";
+                    message += "⚔️ <strong>ROYAL KNIGHT:</strong> Excellent command of algebra! You're a valued defender of the Math Empire.";
                 } else if (percentage >= 70) {
-                    message += "🛡️ <strong>NOBLE LORD:</strong> Strong performance! Continue honing your skills.";
+                    message += "🛡️ <strong>NOBLE LORD:</strong> Strong performance! Continue honing your skills to ascend the ranks.";
                 } else if (percentage >= 60) {
-                    message += "🏰 <strong>LOYAL VASSAL:</strong> Good effort! Study the explanations to strengthen your geometry.";
+                    message += "🏰 <strong>LOYAL VASSAL:</strong> Good effort! Study the explanations to strengthen your mathematical kingdom.";
                 } else {
-                    message += "📚 <strong>APPRENTICE MAGE:</strong> The path to mastery begins here. Review each solution carefully.";
+                    message += "📚 <strong>APPRENTICE MAGE:</strong> The path to mastery begins here. Review each solution carefully to build your empire.";
                 }
                
                 scoreMessage.innerHTML = message;
@@ -945,8 +990,9 @@
             const secondsTaken = timeTaken % 60;
            
             // Create result content
-            let resultContent = `D/ASHARF ELSAQA - TRIANGLE GEOMETRY CHALLENGE RESULTS\n`;
+            let resultContent = `D/Asharf elsaqa - ADVANCED ALGEBRA RESULTS\n`;
             resultContent += `===================================================\n\n`;
+            resultContent += `Instructor: D/Asharf elsaqa\n`;
             resultContent += `Challenge started at: ${examStartTime.toLocaleString()}\n`;
             resultContent += `Challenge completed at: ${endTime.toLocaleString()}\n`;
             resultContent += `Time taken: ${minutesTaken} minutes, ${secondsTaken} seconds\n\n`;
@@ -980,7 +1026,7 @@
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = `D_Asharf_elsaqa_Geometry_${endTime.toISOString().split('T')[0]}.txt`;
+            a.download = `Asharf_elsaqa_Results_${endTime.toISOString().split('T')[0]}.txt`;
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
